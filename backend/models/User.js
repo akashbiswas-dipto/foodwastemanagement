@@ -7,7 +7,8 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     university: { type: String },
-    address: { type: String },
+    address: { type: String, required: true},
+    userType: {type:String, default:'self_donor',required:true},
 });
 
 userSchema.pre('save', async function (next) {

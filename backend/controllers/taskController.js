@@ -13,9 +13,9 @@ res.status(500).json({ message: error.message });
 const addTask = async (
 req,
 res) => {
-const { title, description, deadline } = req.body;
+const { title, foodCategory, description, deadline,quantity, location } = req.body;
 try {
-const task = await Task.create({ userId: req.user.id, title, description, deadline });
+const task = await Task.create({ userId: req.user.id, title, foodCategory, description, deadline,quantity, location });
 res.status(201).json(task);
 } catch (error) {
 res.status(500).json({ message: error.message });

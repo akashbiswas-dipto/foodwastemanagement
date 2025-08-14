@@ -25,6 +25,7 @@ const Profile = () => {
           email: response.data.email,
           university: response.data.university || '',
           address: response.data.address || '',
+          userType: response.data.userType || '',
         });
       } catch (error) {
         alert('Failed to fetch profile. Please try again.');
@@ -58,7 +59,7 @@ const Profile = () => {
   return (
     <div className="max-w-md mx-auto mt-20">
       <form onSubmit={handleSubmit} className="bg-white p-6 shadow-md rounded">
-        <h1 className="text-2xl font-bold mb-4 text-center">Your Profile</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center">{formData.name} Profile</h1>
         <input
           type="text"
           placeholder="Name"
@@ -75,10 +76,10 @@ const Profile = () => {
         />
         <input
           type="text"
-          placeholder="University"
-          value={formData.university}
-          onChange={(e) => setFormData({ ...formData, university: e.target.value })}
+          value={formData.userType=='self_donor' ? 'Self Donor' : 'Food Contributor'}
+          onChange={(e) => setFormData({ ...formData, userType: e.target.value })}
           className="w-full mb-4 p-2 border rounded"
+          disabled
         />
         <input
           type="text"
@@ -87,7 +88,7 @@ const Profile = () => {
           onChange={(e) => setFormData({ ...formData, address: e.target.value })}
           className="w-full mb-4 p-2 border rounded"
         />
-        <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded">
+        <button type="submit" className="w-full bg-green-600 text-white p-2 rounded">
           {loading ? 'Updating...' : 'Update Profile'}
         </button>
       </form>

@@ -3,17 +3,22 @@ import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../axiosConfig';
 
 const Register = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', password: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', password: '', address:'', userType:'' });
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!formData.name || !formData.email || !formData.password || !formData.address || !formData.userType) {
+    alert("Please fill in all fields.");
+    return; 
+    }
     try {
       await axiosInstance.post('/api/auth/register', formData);
       alert('Registration successful. Please log in.');
       navigate('/login');
     } catch (error) {
-      alert('Registration failed. Please try again.');
+      const message = error.response?.data?.message || 'Registration failed. Please try again.';
+      alert(message);
     }
   };
 
@@ -42,6 +47,23 @@ const Register = () => {
           onChange={(e) => setFormData({ ...formData, password: e.target.value })}
           className="w-full mb-4 p-2 border rounded"
         />
+        <input
+          type="text"
+          placeholder="Address"
+          value={formData.address}
+          onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+          className="w-full mb-4 p-2 border rounded"
+        />
+        <select
+          value={formData.userType}
+          onChange={(e) => setFormData({ ...formData, userType: e.target.value })}
+          className="w-full mb-4 p-2 border rounded"
+        >
+          <option value="">Select user type</option>
+          <option value="self_donor">Self Donor</option>
+          <option value="restaurant">Restaurant</option>
+          <option value="ngo">NGO</option>
+        </select>
         <button type="submit" className="w-full bg-green-600 text-white p-2 rounded">
           Register
         </button>
