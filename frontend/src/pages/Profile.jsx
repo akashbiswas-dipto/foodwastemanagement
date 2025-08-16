@@ -76,7 +76,7 @@ const Profile = () => {
         />
         <input
           type="text"
-          value={formData.userType=='self_donor' ? 'Self Donor' : 'Food Contributor'}
+          value={formData.userType==='self_donor' ? 'Self Donor' : 'Food Contributor'}
           onChange={(e) => setFormData({ ...formData, userType: e.target.value })}
           className="w-full mb-4 p-2 border rounded"
           disabled
