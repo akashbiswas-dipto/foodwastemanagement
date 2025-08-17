@@ -1,26 +1,49 @@
-**Task Manager Application Overview:The task manager application is designed to help users efficiently manage their tasks and responsibilities by providing a user-friendly interface for creating, viewing, updating, and deleting tasks. It includes essential features such as secure user authentication, allowing individuals to sign up and log in to their accounts, as well as profile management to update personal information. With built-in validation such as input field validation and email validation, the application ensures a seamless user experience while enhancing productivity and organization in both personal and professional settings. **
+Food Waste Management Application Overview
 
-**This apps **contain** the following features:**
+The Food Waste Management application is designed to reduce food wastage by connecting restaurants and food donors with NGOs, ensuring surplus food reaches those in need. The application provides a user-friendly interface for donors and NGOs to manage their activities, including registering, logging in, updating profiles, and managing food donations or requests.
 
-* Signup
-* Login
-* Logout
-* Update profile
-* Add tasks
-* View tasks
-* Update tasks
-* Delete tasks
+Key features include secure user authentication for sign-up and login, profile management, and built-in validation to ensure accurate input (such as email validation). The platform streamlines the process of redistributing excess food, promoting efficiency, accountability, and social responsibility in both personal and organizational settings.
 
-**This **app**lication** is**almost **a** precompiled** app**. However, students will develop some features,**such as adding tasks, viewing tasks, updating tasks, and **deleting** tasks**. **Students** will interact with GitHub when they develop the features.**
+Features of the Application
 
----
+Sign up for donors and NGOs
 
-**Prerequisite:** Please install the following software and create account in following web tools** **
+Login and logout functionality
 
-* **Nodejs [**[https://nodejs.org/en](https://nodejs.org/en)]** **
-* **Git [**[https://git-scm.com/](https://git-scm.com/)]** **
-* **VS code editor** [[https://code.visualstudio.com/](https://code.visualstudio.com/)]** **
-* **MongoDB Account** [[https://account.mongodb.com/account/login](https://account.mongodb.com/account/login)]** - In tutorial, we have also showed how can you create account and database: follow step number 2.**
-* **GitHub Account** [[https://github.com/signup?source=login](https://github.com/signup?source=login)]** **
+Update user profiles
 
----
+Add food donations
+
+View available food donations
+
+Update food donation details
+
+Delete food donation records
+
+Student Participation
+
+While the application comes mostly precompiled, students will develop certain key functionalities, including:
+
+Adding food donations
+
+Viewing food donations
+
+Updating food donation information
+
+Deleting food donation records
+
+During development, students will also interact with GitHub to manage and track their code contributions.
+
+Prerequisites
+
+Before starting, ensure the following software and accounts are set up:
+
+Node.js – https://nodejs.org/en
+
+Git – https://git-scm.com/
+
+VS Code Editor – https://code.visualstudio.com/
+
+MongoDB Account – https://account.mongodb.com/account/login (Follow step 2 in the tutorial to create your database.)
+
+GitHub Account – https://github.com/signup?source=login
