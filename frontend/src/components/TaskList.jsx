@@ -38,6 +38,12 @@ const TaskList = ({ tasks, setTasks, setEditingTask }) => {
             >
               Delete
             </button>
+            <button
+              onClick={() => handleDelete(task._id)}
+              className="bg-green-900 text-white px-4 py-2 rounded"
+            >
+              Status Change
+            </button>
           </div>
         </div>
       ))}
