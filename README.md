@@ -1,5 +1,5 @@
-Food Waste Management Application
-
+Food Waste Management Application Updated
+ 
 The Food Waste Management application is designed to reduce food wastage by connecting restaurants and food donors with NGOs, ensuring surplus food reaches those in need. The application provides a user-friendly interface for donors and NGOs to manage their activities, including registering, logging in, updating profiles, and managing food donations or requests.
 
 Key features include secure user authentication for sign-up and login, profile management, and built-in validation to ensure accurate input (such as email validation). The platform streamlines the process of redistributing excess food, promoting efficiency, accountability, and social responsibility in both personal and organizational settings.
